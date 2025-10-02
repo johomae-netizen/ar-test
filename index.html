@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin:0; overflow:hidden;">
+    <a-scene embedded arjs>
+      <!-- マーカー指定 -->
+      <a-marker type="pattern" url="marker.patt">
+        <!-- 絵をQuadに貼って上下に揺らす -->
+        <a-plane src="child_art.png" rotation="-90 0 0" width="1" height="1"
+          animation="property: position; to: 0 0.2 0; dir: alternate; dur: 1000; loop: true">
+        </a-plane>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
